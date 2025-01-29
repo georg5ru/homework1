@@ -15,6 +15,12 @@ public class Main {
         System.out.println(friend);
         friend = friend / 7;
         System.out.println(friend);
+        var frog = 3.5;
+        System.out.println(frog);
+        frog = frog * 10;
+        System.out.println(frog);
+        frog = frog / 3.5;
+        System.out.println(frog);
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
