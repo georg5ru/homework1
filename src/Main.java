@@ -4,5 +4,6 @@ public class Main {
         var secondBoxer = 82.7;
         System.out.println(firstBoxer + secondBoxer);
         System.out.println(secondBoxer - firstBoxer);
+        System.out.println(secondBoxer % firstBoxer);
         }
     }
