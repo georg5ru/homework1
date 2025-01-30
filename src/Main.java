@@ -8,9 +8,6 @@ public class Main {
         System.out.println(cat);
         System.out.println(paper);
         //task2
-        dog = 8.0;
-        cat = 3.6;
-        paper = 763789;
         dog = dog + 4;
         cat = cat + 4;
         paper = paper + 4;
@@ -44,8 +41,6 @@ public class Main {
         System.out.println(firstBoxer + secondBoxer);
         System.out.println(secondBoxer - firstBoxer);
         //task7
-        firstBoxer = 78.2;
-        secondBoxer = 82.7;
         System.out.println(firstBoxer + secondBoxer);
         System.out.println(secondBoxer - firstBoxer);
         System.out.println(secondBoxer % firstBoxer);
