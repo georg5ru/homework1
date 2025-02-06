@@ -16,7 +16,7 @@ public class Main {
         //task2
         float twenty = 27.2f;
         long nine = 987678965549L;
-        double two = 2.786f;
+        double two = 2.786d;
         int five = 569;
         int minus = -159;
         short pepe = 27897;
@@ -65,8 +65,11 @@ public class Main {
         int plusMasha = 67760 / 10;
         int plusDenis = 83690 / 10;
         int plusKris = 76230 / 10;
-        System.out.println("Маша теперь получает " + masha + plusMasha + " рублей. Годовой доход вырос на " + plusMasha + " рублей");
-        System.out.println("Маша теперь получает " + kris + plusKris + " рублей. Годовой доход вырос на " + plusKris + " рублей");
-        System.out.println("Маша теперь получает " + denis + plusDenis + " рублей. Годовой доход вырос на " + plusDenis + " рублей");
+        int newMasha = masha + plusMasha;
+        int newKris = kris + plusKris;
+        int newDenis = denis + plusDenis;
+        System.out.println("Маша теперь получает " + newMasha + " рублей. Годовой доход вырос на " + plusMasha + " рублей");
+        System.out.println("Кристина теперь получает " + newKris + " рублей. Годовой доход вырос на " + plusKris + " рублей");
+        System.out.println("Денис теперь получает " + newDenis + " рублей. Годовой доход вырос на " + plusDenis + " рублей");
     }
 }
