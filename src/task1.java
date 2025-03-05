@@ -1,73 +1,91 @@
 public class task1 {
     public static void main(String[] args) {
         //task1
-        int age = 18;
-        if (age < 18) {
-            System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать");
+        int clientOS = 1;
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         } else {
-            System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
         //task2
-        int temp = 5;
-        if (temp < 5) {
-            System.out.println("На улице " + temp + " градусов, нужно надеть шапку");
+        clientOS = 0;
+        int clientDeviceYear = 2015;
+        if (clientOS == 1) {
+            if (clientDeviceYear > 2015) {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
         } else {
-            System.out.println("На улице " + temp + " градусов, можно идти без шапки");
-        }
-        //task3
-        int speed = 60;
-        if (speed > 60) {
-            System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
-        } else {
-            System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
-        }
-        //task4
-        int ageOfMan = 23;
-        if (ageOfMan >= 2 && ageOfMan <= 6) {
-            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить в детский сад");
-        }
-        if (ageOfMan >= 7 && ageOfMan <= 17) {
-            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить в школу");
-        }
-        if (ageOfMan >= 18 && ageOfMan <= 24) {
-            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить в университет");
-        }
-        if (ageOfMan > 24) {
-            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить на работу");
-        }
-        //task5
-        int ageOfChild = 23;
-        if (ageOfChild < 5) {
-            System.out.println("Если возраст ребенка равен " + ageOfChild + " то ему нельзя кататься на аттракционе");
-        }
-        if (ageOfChild >= 5 && ageOfChild <= 14) {
-            System.out.println("Если возраст ребенка равен " + ageOfChild + " то ему можно кататься на аттракционе в сопровождении взрослого");
-        }
-        if (ageOfChild > 14) {
-            System.out.println("Если возраст ребенка равен " + ageOfChild + " то ему можно кататься на аттракционе без сопровождения взрослого");
-        }
-        //task6
-        int seats = 52;
-        if (seats < 60) {
-            System.out.println("Есть сидячие места");
-        }
-        if (seats >= 60 && seats < 102) {
-            System.out.println("Есть стоячее место");
-        } else {
-            System.out.println("Вагон забит");
-        }
-        //task7
-        int one = 6;
-        int two = 1;
-        int three = 3;
-        if (one >= two && one >= three) {
-            System.out.println("Число 1 больше всех");
-        }
-        if (two >= one && two >= three) {
-            System.out.println("Число 2 больше всех");
-        }
-        if (three >= two && three >= one) {
-            System.out.println("Число 3 больше всех");
+            if (clientDeviceYear > 2015) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            }
+            //task3
+            int year = 2021;
+            if (year % 400 == 0) {
+                System.out.println(year + " год является високосным");
+            } else if (year % 100 == 0) {
+                System.out.println(year + " год не является високосным");
+            } else if (year % 4 == 0) {
+                System.out.println(year + " год является високосным");
+            } else {
+                System.out.println(year + " год не является високосным");
+            }
+            //task4
+            int deliveryDistance = 95;
+            if (deliveryDistance <= 20) {
+                System.out.println("Потребуется дней: 1");
+            } else if (deliveryDistance <= 60) {
+                System.out.println("Потребуется дней: 2");
+            } else if (deliveryDistance <= 100) {
+                System.out.println("Потребуется дней: 3");
+            } else {
+                System.out.println("Доставки нет");
+            }
+            //task5
+            int monthNumber = 12;
+            switch (monthNumber) {
+                case 1:
+                    System.out.println("Январь");
+                    break;
+                case 2:
+                    System.out.println("Февраль");
+                    break;
+                case 3:
+                    System.out.println("Март");
+                    break;
+                case 4:
+                    System.out.println("Апрель");
+                    break;
+                case 5:
+                    System.out.println("Май");
+                    break;
+                case 6:
+                    System.out.println("Июнь");
+                    break;
+                case 7:
+                    System.out.println("Июль");
+                    break;
+                case 8:
+                    System.out.println("Август");
+                    break;
+                case 9:
+                    System.out.println("Сентябрь");
+                    break;
+                case 10:
+                    System.out.println("Октябрь");
+                    break;
+                case 11:
+                    System.out.println("Ноябрь");
+                    break;
+                case 12:
+                    System.out.println("Декабрь");
+                    break;
+                default:
+                    System.out.println("Ошибка, нет такого месяца");
+            }
         }
     }
 }
