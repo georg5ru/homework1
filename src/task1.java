@@ -2,7 +2,7 @@ public class task1 {
     public static void main(String[] args) {
         //task1
         int age = 18;
-        if (age >= 18) {
+        if (age < 18) {
             System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать");
         } else {
             System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
@@ -22,29 +22,29 @@ public class task1 {
             System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
         }
         //task4
-        int vozr = 23;
-        if (vozr >= 2 && vozr <= 6) {
-            System.out.println("Если возраст человека равен " + vozr + " то ему нужно ходить в детский сад");
+        int ageOfMan = 23;
+        if (ageOfMan >= 2 && ageOfMan <= 6) {
+            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить в детский сад");
         }
-        if (vozr >= 7 && vozr <= 17) {
-            System.out.println("Если возраст человека равен " + vozr + " то ему нужно ходить в школу");
+        if (ageOfMan >= 7 && ageOfMan <= 17) {
+            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить в школу");
         }
-        if (vozr >= 18 && vozr <= 24) {
-            System.out.println("Если возраст человека равен " + vozr + " то ему нужно ходить в университет");
+        if (ageOfMan >= 18 && ageOfMan <= 24) {
+            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить в университет");
         }
-        if (vozr > 24) {
-            System.out.println("Если возраст человека равен " + vozr + " то ему нужно ходить на работу");
+        if (ageOfMan > 24) {
+            System.out.println("Если возраст человека равен " + ageOfMan + " то ему нужно ходить на работу");
         }
         //task5
-        int let = 23;
-        if (let < 5) {
-            System.out.println("Если возраст ребенка равен " + let + " то ему нельзя кататься на аттракционе");
+        int ageOfChild = 23;
+        if (ageOfChild < 5) {
+            System.out.println("Если возраст ребенка равен " + ageOfChild + " то ему нельзя кататься на аттракционе");
         }
-        if (let > 5 && let < 14) {
-            System.out.println("Если возраст ребенка равен " + let + " то ему можно кататься на аттракционе в сопровождении взрослого");
+        if (ageOfChild >= 5 && ageOfChild <= 14) {
+            System.out.println("Если возраст ребенка равен " + ageOfChild + " то ему можно кататься на аттракционе в сопровождении взрослого");
         }
-        if (let > 14) {
-            System.out.println("Если возраст ребенка равен " + let + " то ему можно кататься на аттракционе без сопровождения взрослого");
+        if (ageOfChild > 14) {
+            System.out.println("Если возраст ребенка равен " + ageOfChild + " то ему можно кататься на аттракционе без сопровождения взрослого");
         }
         //task6
         int seats = 52;
