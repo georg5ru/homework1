@@ -23,7 +23,7 @@ public class task1 {
         //task5
         System.out.println("task5");
         for (int i = 1904; i <= 2096; i += 4) {
-            System.out.println(i);
+            System.out.println(i + "год является високосным");
         }
         //task6
         System.out.println("task6");
@@ -46,9 +46,8 @@ public class task1 {
         //task9
         System.out.println("task9");
         total = 29000;
-        int percent = total / 100;
         for (int i = 1; i <= 12; i += 1) {
-            total += percent;
+            total *= 1.12;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
         }
         //task10
