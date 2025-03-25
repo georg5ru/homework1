@@ -3,38 +3,25 @@ import java.util.Arrays;
 public class task1 {
     public static void main(String[] args) {
         //task1
-        int[] first = {1, 2, 3};
-        double[] second = {1.57, 7.654, 9.986};
-        int[] third = new int[5];
-        //task2
-        for (int i = 0; i <= 2; i++) {
-            System.out.println(first[i]);
-        }
-        for (int i = 0; i <= 2; i++) {
-            System.out.println(second[i]);
-        }
+        int[] moneySpend = {42, 52, 1488, 1000, 7};
+        int summa = 0;
         for (int i = 0; i <= 4; i++) {
-            System.out.println(third[i]);
+            summa += moneySpend[i];
         }
-        //task3
-        for (int i = 2; i >= 0; i--) {
-            System.out.print(first[i] + " ");
-        }
-        System.out.println();
-        for (int i = 2; i >= 0; i--) {
-            System.out.print(second[i] + " ");
-        }
-        System.out.println();
-        for (int i = 4; i >= 0; i--) {
-            System.out.print(third[i] + " ");
-        }
-        System.out.println();
-        //task4
-        for (int i = 0; i >= 2; i++) {
-            if (first[i] % 2 != 0) {
-                first[i] += 1;
+        System.out.println("Сумма трат за месяц составила " + summa + " рублей");
+        //task2
+        int maximum = 0;
+        int minimum = 999999999;
+        for (int i = 0; i <= 4; i++) {
+            if (moneySpend[i] > maximum) {
+                maximum = moneySpend[i];
+            }
+            if (moneySpend[i] < minimum) {
+                minimum = moneySpend[i];
             }
         }
-        System.out.println(Arrays.toString(first));
+        System.out.println("Минимальная сумма трат за неделю составила " + minimum + " рублей. Максимальная сумма трат за неделю составила " + maximum + " рублей");
+        //task3
+        System.out.println("Средняя сумма трат за месяц составила " + (summa / 5) + " рублей");
     }
 }
