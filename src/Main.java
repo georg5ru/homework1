@@ -1,69 +1,84 @@
+import java.time.LocalDate;
+
 public class Main {
+
     public static void main(String[] args) {
-        // Задача 1
-        System.out.println("Задача 1: Сумма всех выплат за месяц.");
+        // Задача 1: Проверка високосного года
+        int year = 2024;
+        checkLeapYear(year);
 
-        int[] monthExpenditures = {10000, 20000, 15000, 12000, 8000};
-        int sumMonth = 0;
-        for (int expenditure : monthExpenditures) {
-            sumMonth += expenditure;
+        // Задача 2: Определение версии приложения
+        int osType = 0; // 0 — iOS, 1 — Android
+        int deviceYear = 2019; // Год выпуска устройства
+        suggestAppVersion(osType, deviceYear);
+
+        // Задача 3: Расчет дней доставки банковской карты
+        int distance = 150; // Пример расстояния в километрах
+        calculateDeliveryDays(distance);
+    }
+
+    /**
+     * Задача 1: Метод проверяет, является ли год високосным, и выводит результат в консоль.
+     */
+    public static void checkLeapYear(int year) {
+        if (isLeapYear(year)) {
+            System.out.println(year + " год — високосный год");
+        } else {
+            System.out.println(year + " год — невисокосный год");
         }
-        System.out.println("Сумма трат за месяц составила " + sumMonth + " рублей.");
+    }
 
-        System.out.println();
+    private static boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
 
-        // Задача 2
-        System.out.println("Задача 2: Минимальная и максимальная траты за неделю.");
+    /**
+     * Задача 2: Метод определяет версию приложения для установки на устройство.
+     */
+    public static void suggestAppVersion(int osType, int deviceYear) {
+        int currentYear = LocalDate.now().getYear();
+        String osName = getOsName(osType);
+        String appVersion = getAppVersion(deviceYear, currentYear);
 
-        int[] weeklyExpenditures = {55000, 45000, 72000, 110000, 99999};
-        int minExpense = weeklyExpenditures[0];
-        int maxExpense = weeklyExpenditures[0];
+        System.out.println("Установите " + appVersion + " версию приложения для " + osName);
+    }
 
-        for (int expense : weeklyExpenditures) {
-            if (expense < minExpense) {
-                minExpense = expense;
-            }
-            if (expense > maxExpense) {
-                maxExpense = expense;
-            }
+    private static String getOsName(int osType) {
+        switch (osType) {
+            case 0:
+                return "iOS";
+            case 1:
+                return "Android";
+            default:
+                return "Неизвестная ОС";
         }
+    }
 
-        System.out.println("Минимальная сумма трат за неделю составила " + minExpense + " рублей.");
-        System.out.println("Максимальная сумма трат за неделю составила " + maxExpense + " рублей.");
+    private static String getAppVersion(int deviceYear, int currentYear) {
+        return (deviceYear < currentYear) ? "облегченную" : "обычную";
+    }
 
-        System.out.println();
-
-        // Задача 3
-        System.out.println("Задача 3: Средняя сумма трат за месяц.");
-
-        int[] monthExpendituresForAverage = {12000, 15000, 14000, 13000, 11000};
-        int sumForAverage = 0;
-        for (int expense : monthExpendituresForAverage) {
-            sumForAverage += expense;
+    /**
+     * Задача 3: Метод рассчитывает количество дней доставки в зависимости от расстояния.
+     */
+    public static void calculateDeliveryDays(int distance) {
+        int deliveryDays = getDeliveryDays(distance);
+        if (deliveryDays == -1) {
+            System.out.println("Доставка невозможна для расстояния " + distance + " км.");
+        } else {
+            System.out.println("Потребуется дней: " + deliveryDays);
         }
+    }
 
-        double average = (double) sumForAverage / monthExpendituresForAverage.length;
-        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей.");
-
-        System.out.println();
-
-        // Задача 4
-        System.out.println("Задача 4: Исправить &laquo;перевернутое&raquo; имя.");
-
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ',
-                'v', 'o', 'n', 'a', 'v', 'I' };
-
-        for (int i = 0; i < reverseFullName.length / 2; i++) {
-            int j = reverseFullName.length - 1 - i;
-            char temp = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[j];
-            reverseFullName[j] = temp;
+    private static int getDeliveryDays(int distance) {
+        if (distance <= 20) {
+            return 1;
+        } else if (distance <= 60) {
+            return 2;
+        } else if (distance <= 100) {
+            return 3;
+        } else {
+            return -1; // Если расстояние больше 100 км, доставка невозможна
         }
-
-        System.out.print("Результат разворота: ");
-        for (char c : reverseFullName) {
-            System.out.print(c);
-        }
-        System.out.println();
     }
 }
