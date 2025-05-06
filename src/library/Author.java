@@ -1,20 +1,17 @@
-public class Main {
+package library;
+
+public class Author {
     private String firstName;
     private String lastName;
 
-    public Main(String firstName, String lastName) {
+    public Author(String firstName, String lastName) {
         this.firstName = firstName;
-        this.lastName = lastName;
+        this.lastName  = lastName;
     }
 
     /* -------- геттеры -------- */
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
+    public String getFirstName() { return firstName; }
+    public String getLastName()  { return lastName;  }
 
     @Override
     public String toString() {
