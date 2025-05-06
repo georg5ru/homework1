@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Main {
+public class Homework {
 
     public static void main(String[] args) {
         // Задача 1: Проверка високосного года
