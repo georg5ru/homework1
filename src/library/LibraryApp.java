@@ -1,21 +1,24 @@
 package library;
 
 public class LibraryApp {
-
     public static void main(String[] args) {
+        Author author1 = new Author("J.K. Rowling", 1965);
+        Author author2 = new Author("J.K. Rowling", 1965); // тот же автор
 
-        Author orwell       = new Author("George",  "Orwell");
-        Author dostoevsky   = new Author("Fyodor",  "Dostoevsky");
+        Book book1 = new Book("Harry Potter", author1, 1997);
+        Book book2 = new Book("Harry Potter", author2, 1997);
+        System.out.println("Author1: " + author1);
+        System.out.println("Author2: " + author2);
+        System.out.println("\nBook1: " + book1);
+        System.out.println("Book2: " + book2);
 
-        Book nineteenEightyFour = new Book("1984",                 orwell,     1949);
-        Book crimeAndPunishment = new Book("Crime and Punishment", dostoevsky, 1866);
+        System.out.println("\nauthor1.equals(author2): " + author1.equals(author2));
+        System.out.println("book1.equals(book2): " + book1.equals(book2));
 
-        String catalogue = "";
-        catalogue += nineteenEightyFour + System.lineSeparator();
-        catalogue += crimeAndPunishment + System.lineSeparator();
-        System.out.println("Справочник:\n" + catalogue);
+        System.out.println("\nauthor1.hashCode(): " + author1.hashCode());
+        System.out.println("author2.hashCode(): " + author2.hashCode());
 
-        nineteenEightyFour.setYearPublished(1950);
-        System.out.println("После обновления года:\n" + nineteenEightyFour);
+        System.out.println("\nbook1.hashCode(): " + book1.hashCode());
+        System.out.println("book2.hashCode(): " + book2.hashCode());
     }
 }
